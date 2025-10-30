@@ -6,60 +6,113 @@
     <title>Гомель</title>
     <style>
         body { 
-            bgcolor: #c0c0c0; 
             margin: 0; 
-            padding: 15px; 
+            padding: 0; 
             font-family: Arial, sans-serif; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gomel-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
         }
-        .container { max-width: 100%; }
-        img { max-width: 100%; height: auto; }
-        table { width: 100%; border-collapse: collapse; }
-        td { padding: 10px; vertical-align: top; }
+        .container { 
+            max-width: 100%; 
+            padding: 20px;
+        }
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .mobile-table { display: block; }
+        .mobile-row { display: flex; flex-direction: column; }
+        .mobile-cell { padding: 15px; }
         .links { text-align: center; padding: 15px; }
-        .links a { 
+        .link-btn { 
             display: block; 
-            margin: 10px 0; 
-            padding: 10px; 
-            background: #000080; 
+            margin: 12px 0; 
+            padding: 16px; 
+            background: linear-gradient(45deg, #000080, #4a6fa5);
             color: white; 
             text-decoration: none; 
-            border-radius: 5px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
         h1 { 
             text-align: center; 
-            color: #000080; 
-            font-size: 24px; 
-            margin: 20px 0; 
+            color: white; 
+            font-size: 32px; 
+            margin: 30px 0; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .history-text { 
+            color: #800000; 
+            font-size: 17px; 
+            text-align: center;
+            line-height: 1.6;
+        }
+        .header-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 768px) {
+            .mobile-table { display: table; width: 100%; }
+            .mobile-row { display: table-row; }
+            .mobile-cell { display: table-cell; vertical-align: top; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Гомель -- один из чарующих уголков Беларуси</h1>
+        <div class="header-logo">
+            <h1>🏰 Гомель -- один из чарующих уголков Беларуси</h1>
+        </div>
         
-        <table>
-            <tr>
-                <td style="width: 40%;">
-                    <img src="Гомель2.jpg" alt="Гомель" style="width: 100%;">
-                </td>
-                <td style="width: 60%;">
-                    <div style="color: #800000; font-size: 18px; text-align: center;">
-                        <p><b>Гомель богат историей, связанной с графом П. А. Румянцевым-Задунайским, генералом-фельдмаршалом И. Ф. Паскевичем-Эриванским.</b></p>
-                        <p>Впервые Гомель упоминается в 1142 году, как владение Черниговского князя.</p>
-                        <p>21 марта 1560 года Сигизмундом Августом был утверждён герб Гомеля: «В красном поле серебряный кавалерский крест».</p>
-                        <p>В 1670 году город получил магдебургское право.</p>
+        <div class="content-box">
+            <div class="mobile-table">
+                <div class="mobile-row">
+                    <div class="mobile-cell" style="width: 40%;">
+                        <img src="Гомель2.jpg" alt="Гомельский дворец">
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="links">
-                    <a href="history.html">История</a>
-                    <a href="legenda.html">Легенды Гомеля</a>
-                    <a href="foto.html">Фотографии</a>
-                    <a href="tables.html">Таблицы о Гомеле</a>
-                </td>
-            </tr>
-        </table>
+                    <div class="mobile-cell" style="width: 60%;">
+                        <div class="history-text">
+                            <p><b>Гомель богат историей, связанной с графом П. А. Румянцевым-Задунайским, генералом-фельдмаршалом И. Ф. Паскевичем-Эриванским.</b></p>
+                            <p>Впервые Гомель упоминается в 1142 году, как владение Черниговского князя.</p>
+                            <p>21 марта 1560 года Сигизмундом Августом был утверждён герб Гомеля: «В красном поле серебряный кавалерский крест».</p>
+                            <p>В 1670 году город получил магдебургское право.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-row">
+                    <div class="mobile-cell" style="width: 100%;">
+                        <div class="links">
+                            <a href="history.html" class="link-btn">📖 История Гомеля</a>
+                            <a href="legenda.html" class="link-btn">🏰 Легенды Гомеля</a>
+                            <a href="foto.html" class="link-btn">📷 Фотографии</a>
+                            <a href="tables.html" class="link-btn">📊 Таблицы о Гомеле</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
